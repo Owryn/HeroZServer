@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2026-03-15
+
+### Added
+- Guild battle history (`getGuildBattleHistoryFights`, `getGuildBattleHistoryFight`) showing past guild battles, defenses and dungeon fights with enemy emblems
+- Item validation in `Player::getItems()` and `Player::createItem()` to filter items with identifiers not in GameSettings templates, preventing SWF crashes
+
 ## [1.0.4] - 2026-03-15
 
 ### Added
@@ -74,7 +80,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Removed dead Inventory and Battles entries from admin sidebar
 
-## [1.0.0] - 2026-03-10
+## [1.0.0] - 2026-03-12
 
 ### Added
 - Ruffle.rs Flash emulation so the SWF client runs in modern browsers
@@ -209,3 +215,14 @@ All notable changes to this project will be documented in this file.
 - Shop item generation
 - Mailbox auto-refresh (every 1 min)
 - Guild auto-refresh (attack/members/chat, every ~20 sec)
+
+---
+
+[1.0.4]: https://github.com/xReveres/HeroZServer/compare/v1.0.3...v1.0.4
+[1.0.3]: https://github.com/xReveres/HeroZServer/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/xReveres/HeroZServer/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/xReveres/HeroZServer/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/xReveres/HeroZServer/compare/v0.2.0...v1.0.0
+[0.2.0]: https://github.com/xReveres/HeroZServer/compare/v0.1a...v0.2.0
+[0.1a]: https://github.com/xReveres/HeroZServer/compare/v0.1.0...v0.1a
+[0.1.0]: https://github.com/xReveres/HeroZServer/releases/tag/v0.1.0

@@ -57,6 +57,7 @@ https://imgur.com/a/XjBiT4S
 | Sewing Machine | ✅ | Change item skins for gold or donuts |
 | Costume Collections | ✅ | 33 themed sets with milestone rewards |
 | Guild Dungeons | ✅ | Full attack/join flow with NPC team battles |
+| Guild Battle History | ✅ | View past guild battles and dungeon fights |
 | Surprise Box | ✅ | 1-3 random equipment pieces (rare/epic) |
 | Daily Login Rewards | ✅ | Consecutive login bonuses |
 | Slot Machine | ✅ | 7 reward types (coins, XP, stat points, energy, training, boosters, items), anti-exploit protection |
@@ -93,7 +94,6 @@ About 86% of the game client's actions are implemented. The remaining ones are m
 | Feature | Handlers | Priority | Details |
 |---------|:--------:|:--------:|---------|
 | Quick wins (locale, ToS, session, refresh) | 9 | Low | Simple 10-20 line handlers each |
-| Guild Battle History | 2 | Low | Query existing `guild_battle` table |
 | Voucher / Promo Codes | 3 | Low | Code validation + rewards |
 | Message Ignore System | 3 | Low | Block messages from specific players |
 | Friend System | 5 | Medium | Add/remove friends, friend bar, invitations |
@@ -303,6 +303,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full changelog.
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| **1.0.5** | 2026-03-15 | Guild battle history, item validation safety |
 | **1.0.4** | 2026-03-15 | 10 new handlers (guild elections, artifact release, message items, account management), Config::get() fix |
 | **1.0.3** | 2026-03-14 | Slot machine (7 reward types, anti-exploit), world boss attack flow, tournament fixes |
 | **1.0.2** | 2026-03-13 | World boss attack flow fixes, admin items/characters improvements |
