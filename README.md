@@ -307,7 +307,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full changelog.
 | **1.0.3** | 2026-03-14 | Slot machine (7 reward types, anti-exploit), world boss attack flow, tournament fixes |
 | **1.0.2** | 2026-03-13 | World boss attack flow fixes, admin items/characters improvements |
 | **1.0.1** | 2026-03-13 | Message system bug fixes |
-| **1.0.0** | 2026-03-12 | Major rewrite — Ruffle.rs, email, admin, socket server, goals, herobook, tournaments, world boss, sewing, costumes, guild dungeons, surprise box |
+| **1.0.0** | 2026-03-10 | Major rewrite — Ruffle.rs, email, admin, socket server, goals, herobook, tournaments, world boss, sewing, costumes, guild dungeons, surprise box |
 | **0.2** | 2018 | Guild battles, energy limits, training, daily rewards, slot machine |
 | **0.1** | 2018 | Original engine rewrite by xReveres |
 
