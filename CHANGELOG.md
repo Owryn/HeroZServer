@@ -74,7 +74,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Removed dead Inventory and Battles entries from admin sidebar
 
-## [1.0.0] - 2026-03-12
+## [1.0.0] - 2026-03-10
 
 ### Added
 - Ruffle.rs Flash emulation so the SWF client runs in modern browsers
