@@ -326,7 +326,7 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE).
 
 <div align="center">
 
-Developed by [Nazuna](https://github.com/lNazuna) · Built on [xReveres/HeroZServer](https://github.com/xReveres/HeroZServer) · Flash emulation by [Ruffle.rs](https://ruffle.rs/)
+Developed by [Owryn](https://github.com/Owryn) · Built on [xReveres/HeroZServer](https://github.com/xReveres/HeroZServer) · Flash emulation by [Ruffle.rs](https://ruffle.rs/)
 
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-support-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/owryn)
 
