@@ -11,7 +11,7 @@ class claimLeagueFightRewards{
             
         $player->giveRewards($player->league_fight->character_a_rewards);
         $player->incrementGoalStat('league_fights_completed');
-        if($player->league_fight->winner == 'a'){
+        if($player->battle->winner == 'a'){
             $player->incrementGoalStat('league_fights_won');
             $player->incrementGoalStat('league_fights_won_in_row');
         } else {
@@ -40,7 +40,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "2_1";  //Brąz II
 			$player->character->league_group_id = 200000;
 		}
-		if($player->character->league_points <= 49 && $player->character->league_group_id == 200000){
+		if($player->character->league_points < 49 && $player->character->league_group_id == 200000){
 			Core::req()->data['league_division_change'] = "1_2"; //Brąz III
 			$player->character->league_group_id = 100000;
 		}	
@@ -48,7 +48,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "3_2"; //Brąz I
 			$player->character->league_group_id = 300000;
 		}
-		if($player->character->league_points <= 100 && $player->character->league_group_id == 300000){
+		if($player->character->league_points < 100 && $player->character->league_group_id == 300000){
 			Core::req()->data['league_division_change'] = "2_3"; //Brąz II
 			$player->character->league_group_id = 200000;
 		}	
@@ -56,7 +56,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "4_3"; // Srebro III
 			$player->character->league_group_id = 400000;
 		}		
-		if($player->character->league_points <= 200 && $player->character->league_group_id == 400000){
+		if($player->character->league_points < 200 && $player->character->league_group_id == 400000){
 			Core::req()->data['league_division_change'] = "3_4"; // Brąz I
 			$player->character->league_group_id = 300000;
 		}		
@@ -64,7 +64,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "5_4"; // Srebro II
 			$player->character->league_group_id = 500000;
 		}		
-		if($player->character->league_points <= 300 && $player->character->league_group_id == 500000){
+		if($player->character->league_points < 300 && $player->character->league_group_id == 500000){
 			Core::req()->data['league_division_change'] = "4_3"; // Srebro III
 			$player->character->league_group_id = 400000;
 		}	
@@ -72,7 +72,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "6_5"; // Srebro I
 			$player->character->league_group_id = 600000;
 		}		
-		if($player->character->league_points <= 400 && $player->character->league_group_id == 600000){
+		if($player->character->league_points < 400 && $player->character->league_group_id == 600000){
 			Core::req()->data['league_division_change'] = "5_4"; // Srebro II
 			$player->character->league_group_id = 500000;
 		}			
@@ -80,7 +80,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "7_6"; // Gold III
 			$player->character->league_group_id = 700000;
 		}	
-		if($player->character->league_points <= 525 && $player->character->league_group_id == 700000){
+		if($player->character->league_points < 525 && $player->character->league_group_id == 700000){
 			Core::req()->data['league_division_change'] = "6_5"; // Srebro I
 			$player->character->league_group_id = 600000;
 		}			
@@ -88,7 +88,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "8_7"; // Gold II
 			$player->character->league_group_id = 800000;
 		}			
-		if($player->character->league_points <= 650 && $player->character->league_group_id == 800000){
+		if($player->character->league_points < 650 && $player->character->league_group_id == 800000){
 			Core::req()->data['league_division_change'] = "7_6"; // Gold III
 			$player->character->league_group_id = 700000;
 		}	
@@ -96,7 +96,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "9_8"; // Gold I
 			$player->character->league_group_id = 900000;
 		}		
-		if($player->character->league_points <= 775 && $player->character->league_group_id == 900000){
+		if($player->character->league_points < 775 && $player->character->league_group_id == 900000){
 			Core::req()->data['league_division_change'] = "8_7"; // Gold II
 			$player->character->league_group_id = 800000;
 		}			
@@ -104,7 +104,7 @@ class claimLeagueFightRewards{
 			Core::req()->data['league_division_change'] = "10_9"; // Champion
 			$player->character->league_group_id = 1000000;
 		}		
-		if($player->character->league_points <= 900 && $player->character->league_group_id == 1000000){
+		if($player->character->league_points < 900 && $player->character->league_group_id == 1000000){
 			Core::req()->data['league_division_change'] = "9_8"; // Gold I
 			$player->character->league_group_id = 900000;
 		}			
