@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2026-03-18
+
+### Added
+- `setUserLocale` handler - save language preference from in-game locale change
+- `setUserLatestToS` handler - accept Terms of Service dialog
+- `refreshQuests` handler - refresh quest list when quest booster expires or leaving guild with active booster
+- `logoutUser` handler - clears all session IDs and cookie on logout (was empty stub)
+- `gameReportError` handler - logs SWF client errors to `server/cache/swf_errors.log` (was empty stub)
+
+### Fixed
+- League fight rewards crash - winner field read from wrong table (same as duel fix)
+- League division boundary bug - demotion conditions used `<=` instead of `<`, causing promote+demote on same request at exact boundary value
+- All new handlers now use `$player` parameter instead of `Core::$player` to match existing codebase pattern
+
 ## [1.0.5] - 2026-03-15
 
 ### Added

@@ -94,7 +94,6 @@ About 86% of the game client's actions are implemented. The remaining ones are m
 
 | Feature | Handlers | Priority | Details |
 |---------|:--------:|:--------:|---------|
-| Quick wins (locale, ToS, session, refresh) | 9 | Low | Simple 10-20 line handlers each |
 | Message Ignore System | 3 | Low | Block messages from specific players |
 | Friend System | 5 | Medium | Add/remove friends, friend bar, invitations |
 | Event Quests | 4 | Medium | Timed objectives with 10 tracking types, 6 reward types |
@@ -303,6 +302,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full changelog.
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| **1.0.6** | 2026-03-18 | Quick win handlers (locale, ToS, quest refresh, logout, error logging), league fight fix |
 | **1.0.5** | 2026-03-15 | Guild battle history, voucher/promo codes with admin panel, item validation |
 | **1.0.4** | 2026-03-15 | 10 new handlers (guild elections, artifact release, message items, account management), Config::get() fix |
 | **1.0.3** | 2026-03-14 | Slot machine (7 reward types, anti-exploit), world boss attack flow, tournament fixes |
