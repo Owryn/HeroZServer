@@ -28,7 +28,7 @@ class getMessageList{
 			"character" => $player->character,
 			"messages" => $messages,
 			"messages_character_info" => $charinfo,
-			"messages_ignored_character_info" => array(),
+			"messages_ignored_character_info" => $this->getIgnoredCharacters($player),
 			"messages_read" => $readed
 		);
 		if($load_received){
@@ -37,5 +37,20 @@ class getMessageList{
 		}
 		if($load_sent)
 			Core::req()->data['messages_sent_count'] = count($messages);
+    }
+
+    private function getIgnoredCharacters($player){
+        $ignored = \Srv\DB::sql("SELECT mic.ignored_character_id, mic.ts_creation, c.name, c.gender FROM message_ignored_characters mic JOIN `character` c ON c.id = mic.ignored_character_id WHERE mic.character_id = {$player->character->id}")->fetchAll();
+        $info = [];
+        foreach($ignored as $row){
+            $info[$row['ignored_character_id']] = [
+                'id' => (int)$row['ignored_character_id'],
+                'name' => $row['name'],
+                'gender' => $row['gender'],
+                'online_status' => 2,
+                'ts_ignore_date' => (int)$row['ts_creation']
+            ];
+        }
+        return empty($info) ? (object)[] : (object)$info;
     }
 }

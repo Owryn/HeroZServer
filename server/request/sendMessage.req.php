@@ -33,7 +33,11 @@ class sendMessage{
 		
 		if($target->id == $player->character->id)
 			return Core::setError("errCreatePersonalMessageSelfRecipient");
-		
+
+		$isIgnored = DB::sql("SELECT id FROM message_ignored_characters WHERE character_id = {$target->id} AND ignored_character_id = {$player->character->id}")->fetchAll();
+		if(count($isIgnored) > 0)
+			return Core::setError("errSendMessageInvalidRecipient");
+
 		$msg = new Messages([
 			'character_from_id'=>$player->character->id,
 			'character_to_ids'=>";{$target->id};",

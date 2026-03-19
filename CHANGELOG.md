@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2026-03-19
+
+### Added
+- Message ignore system (`ignoreMessageCharacter`, `unignoreMessageCharacter`) - block/unblock characters from sending messages
+- `getMessageList` now returns ignored characters list
+- `sendMessage` blocks messages from ignored users (shows "unknown recipient" to sender)
+- New DB table: `message_ignored_characters`
+
 ## [1.0.6] - 2026-03-18
 
 ### Added
@@ -14,7 +22,6 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - League fight rewards crash - winner field read from wrong table (same as duel fix)
 - League division boundary bug - demotion conditions used `<=` instead of `<`, causing promote+demote on same request at exact boundary value
-- All new handlers now use `$player` parameter instead of `Core::$player` to match existing codebase pattern
 
 ## [1.0.5] - 2026-03-15
 

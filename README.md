@@ -12,7 +12,7 @@ The original Flash client runs through Ruffle.rs WebAssembly — no Flash Player
 ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=nodedotjs&logoColor=white)
 ![Ruffle](https://img.shields.io/badge/Flash-Ruffle.rs-FF6600?logo=adobe&logoColor=white)
 ![License](https://img.shields.io/badge/License-GPL_v3-blue)
-![SWF Coverage](https://img.shields.io/badge/SWF_Coverage-86%25-brightgreen)
+![SWF Coverage](https://img.shields.io/badge/SWF_Coverage-87%25-brightgreen)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-support-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/owryn)
 
 [Features](#features) · [Screenshots](#screenshots) · [Installation](#installation) · [Socket Server](#socket-server) · [Admin Panel](#admin-panel) · [CLI Scripts](#cli-scripts)
@@ -62,6 +62,7 @@ https://imgur.com/a/XjBiT4S
 | Daily Login Rewards | ✅ | Consecutive login bonuses |
 | Slot Machine | ✅ | 7 reward types (coins, XP, stat points, energy, training, boosters, items), anti-exploit protection |
 | Sidekicks | ✅ | Equip, merge, rename, release, reorder |
+| Message Ignore | ✅ | Block/unblock characters from messaging you |
 | Messages | ✅ | Send, delete, claim item attachments |
 | Account Management | ✅ | Change password/email, delete account, stat redistribution |
 | Voucher / Promo Codes | ✅ | Code validation, usage limits, level/locale restrictions, expiry |
@@ -86,7 +87,7 @@ https://imgur.com/a/XjBiT4S
 
 ### SWF Compatibility
 
-About 86% of the game client's actions are implemented. The remaining ones are mostly the friend system, event quests, and some minor features.
+About 87% of the game client's actions are implemented. The remaining ones are mostly the friend system, event quests, and some minor features.
 
 
 
@@ -94,7 +95,6 @@ About 86% of the game client's actions are implemented. The remaining ones are m
 
 | Feature | Handlers | Priority | Details |
 |---------|:--------:|:--------:|---------|
-| Message Ignore System | 3 | Low | Block messages from specific players |
 | Friend System | 5 | Medium | Add/remove friends, friend bar, invitations |
 | Event Quests | 4 | Medium | Timed objectives with 10 tracking types, 6 reward types |
 | Resource Requests | 8 | Medium | Send energy/spins to friends (depends on Friend System) |
@@ -302,6 +302,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full changelog.
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| **1.1.0** | 2026-03-19 | Message ignore system (ignore/unignore, server-side blocking) |
 | **1.0.6** | 2026-03-18 | Quick win handlers (locale, ToS, quest refresh, logout, error logging), league fight fix |
 | **1.0.5** | 2026-03-15 | Guild battle history, voucher/promo codes with admin panel, item validation |
 | **1.0.4** | 2026-03-15 | 10 new handlers (guild elections, artifact release, message items, account management), Config::get() fix |

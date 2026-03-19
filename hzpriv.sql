@@ -1630,6 +1630,32 @@ ALTER TABLE `vouchers`
 ALTER TABLE `voucher_redemptions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `message_ignored_characters`
+--
+
+CREATE TABLE `message_ignored_characters` (
+  `id` int(11) NOT NULL,
+  `character_id` int(11) NOT NULL,
+  `ignored_character_id` int(11) NOT NULL,
+  `ts_creation` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indeksy dla tabeli `message_ignored_characters`
+--
+ALTER TABLE `message_ignored_characters`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `idx_unique` (`character_id`, `ignored_character_id`);
+
+--
+-- AUTO_INCREMENT dla tabeli `message_ignored_characters`
+--
+ALTER TABLE `message_ignored_characters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
