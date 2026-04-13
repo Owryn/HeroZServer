@@ -56,8 +56,8 @@ class User extends Record implements JsonSerializable{
         'geo_continent_code'=>"EU",
         'settings'=>"{\"tos_sep2015\":true}",
         'ts_banned'=>0,
-        'trusted'=>false,
-        'confirmed'=>false,
+        'trusted'=>b'0',
+        'confirmed'=>b'0',
         'email_notifications'=>1
     ];
 }

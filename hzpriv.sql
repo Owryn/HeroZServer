@@ -843,7 +843,7 @@ CREATE TABLE `user` (
   `registration_ip` varchar(45) DEFAULT NULL,
   `ts_creation` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `email_new` varchar(100) NOT NULL,
+  `email_new` varchar(100) NOT NULL DEFAULT '',
   `password_hash` varchar(40) NOT NULL,
   `last_login_ip` varchar(45) NOT NULL,
   `login_count` int(11) NOT NULL,
@@ -864,7 +864,7 @@ CREATE TABLE `user` (
   `settings` varchar(250) NOT NULL DEFAULT '{"tos_sep2015":true}',
   `ts_banned` int(11) NOT NULL,
   `trusted` tinyint(1) NOT NULL DEFAULT '0',
-  `confirmed` bit(1) NOT NULL DEFAULT b'0',
+  `confirmed` tinyint(1) NOT NULL DEFAULT '0',
   `email_notifications` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

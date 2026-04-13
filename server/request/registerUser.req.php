@@ -21,7 +21,7 @@ class registerUser{
         
         $exists = DB::table('user')->select()->where('email',$email)->exists();
         if($exists)
-            Core::setError('errRegisterUserAlreadyExists');
+            return Core::setError('errRegisterUserAlreadyExists');
         $ssid = md5(microtime());
         $locale = $_COOKIE['web-lang'] ?? 'pl_PL';
         $validLocales = ['pl_PL','en_GB','pt_BR'];
