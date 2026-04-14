@@ -60,6 +60,7 @@ abstract class Record{
             DB::table(static::$_TABLE)->insert($data)->execute();
             $pkeyid = intval(DB::lastInsertId());
             $this->data[$pkey] = $pkeyid;
+            unset(static::$__tablesToSave[$this->_hash]);
             $this->afterInsert($pkeyid);
         }
         $this->afterSave();
